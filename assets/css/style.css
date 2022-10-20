@@ -1,0 +1,333 @@
+@font-face {
+    font-family: "FF Mark Pro Medium";
+    src: url('../font/FF Mark Pro Medium.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "FF Mark Pro Medium";
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --blue: #1877F2;
+    --red: #d13639;
+    --pink: #d950E5;
+    --silver: #ededed;
+
+    --grey-bg: #f9f9f9;
+    --grey-checkbox: #e6e6e6;
+    --grey-link: #b2b2b2;
+    --grey-arrow: #e8e8e8;
+    --grey-text: #9b9b9b;
+    --grey-text-80: #333333;
+    --grey-v: #c7c7c7;
+
+    --hover-grey: #e7e7e7;
+    --hover-red: #bC252A;
+    --hover-blue: #0966de;
+    --hover-btn: #d13639;
+}
+
+main {
+    display: flex;
+    background: var(--hover-grey);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    min-height: 864px;
+    background: var(--grey-bg);
+    padding: clamp(35px, 8%, 47px);
+}
+
+.flex {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 115px;
+    margin-top: 25px;
+}
+
+.title {
+    color: var(--black);
+    font-size: 1.5em;
+    margin-top: 67px;
+    margin-bottom: 27px;
+}
+
+.text-box {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    background: var(--silver);
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.9em;
+    padding: 19px 8px 7px;
+    font-weight: 600;
+    color: var(--grey-text-80);
+}
+
+.text-box span {
+    position: absolute;
+    font-size: 0.7em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--grey-text);
+    margin: 17px;
+    cursor: text;
+    transition: all 200ms ease;
+}
+
+.text-box .span-active {
+    font-size: 0.7em;
+    margin: 8px 10px;
+}
+
+.input:hover {
+    background: var(--hover-grey);
+}
+
+.input:focus {
+    background: var(--white);
+    border: 3px solid var(--black);
+}
+
+.info-icon {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.info-icon img {
+    width: 15px;
+}
+
+.icon {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.info-icon .icon:nth-child(1) {
+    background: var(--blue);
+}
+
+.info-icon .icon:nth-child(2) {
+    background: var(--white);
+    border: 2px solid var(--silver);
+}
+
+.info-icon .icon:nth-child(3) {
+    background: var(--black);
+}
+
+.info-icon .icon:nth-child(2):hover {
+    background: var(--grey-bg);
+}
+
+.info-icon .icon:nth-child(1):hover {
+    background: var(--hover-blue);
+}
+
+.checkbox-button {
+    width: 100%;
+    margin: 13px 0 43px;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-end;
+}
+
+.checkbox {
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    background: var(--grey-checkbox);
+    margin-right: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox:checked {
+    background: var(--red);
+}
+
+.checkbox:checked::after {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 7px;
+    border: 3px solid var(--white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin: 3px 6px;
+}
+
+.button {
+    border: none;
+    width: 65px;
+    height: 65px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 23px;
+    margin-bottom: 59px;
+    background: var(--red);
+    color: var(--silver);
+}
+
+.button svg {
+    color: var(--grey-arrow);
+    stroke-width: 2.5;
+}
+
+.button:hover {
+    background: var(--hover-red);
+}
+
+.button:disabled {
+    cursor: auto;
+    background: var(--grey-bg);
+    border: 2px solid var(--grey-arrow);
+}
+
+.button:disabled svg {
+    fill: var(--grey-arrow);
+}
+
+.link {
+    text-decoration: none;
+    font-size: 0.7em;
+    color: var(--grey-link);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.link:hover {
+    color: var(--black);
+}
+
+p {
+    text-decoration: none;
+    font-size: 0.7em;
+    color: var(--grey-v);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 600;
+    line-height: 0.1;
+    margin-left: 282px;
+}
+
+p:hover {
+    color: var(--grey-text);
+}
+
+.bg {
+    background-image: url("../img/wppr.jpg");
+    max-width: 1136px;
+    min-height: 864px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+
+.container-window {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.line svg {
+    width: 34px;
+    height: 23px;
+    cursor: pointer;
+    color: var(--grey-bg);
+}
+
+.line svg:hover {
+    background: rgba(255, 255, 255, 0.164);
+}
+
+.close svg {
+    color: var(--grey-bg);
+    width: 34px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.close svg:hover {
+    background: var(--hover-red);
+}
+
+.container-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    margin-top: 15px;
+    margin-left: 26px;
+    transform: rotate(45deg);
+    background: var(--pink);
+    border-radius: 3px;
+    justify-content: center;
+}
+
+.details a {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    transform: rotate(-45deg);
+    color: var(--black);
+    margin-top: 2px;
+}
+
+.settings {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(68, 64, 64, 0.096);
+    margin-top: 6px;
+    margin-right: 31px;
+    border-radius: 17px;
+    border: 2px solid rgba(0, 0, 0, 0.219);
+    justify-content: center;
+    align-items: center;
+}
+
+.settings img {
+    width: 22px;
+}
