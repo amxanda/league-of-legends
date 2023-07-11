@@ -6,5 +6,3 @@
 <br>
 You can see the result by clicking <a href="https://amxanda.github.io/league-of-legends/">here</a>.
 <br>
-<br>
-<hr>
